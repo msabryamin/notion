@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<style>
+#first{
+z-index:0;
+width:100px !important; 
+}
+#first input{
+width:30px !important; 
+}
+#out {
+z-index:1;
+position :absolute;
+top:1px;
+left:1px;
+-webkit-print-color-adjust: exact;
+
+	box-shadow: -2px 10px 12px -1px #9fc5e6;
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	background-color:#79bbff;
+	border-radius:11px;
+	border:1px solid #337bc4;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:40px;
+	font-weight:bold;
+	text-decoration:none;
+
+
+
+}
+
+</style>
+<div id="first">
+<form>
+<input type="text" id="myText" value="Mickey">
+<button type="button" onclick="myFunction()">Try</button>
+</form>
+</div>
+<div id="out" onclick="hide('out')"><p id="demo"></p></div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myText");
+    document.getElementById("demo").innerHTML = "&nbsp; " + x.value + " &nbsp; ";
+}
+function hide(id) {
+	document.getElementById(id).style.display = "none";
+}
+</script>
+</body>
+</html>
